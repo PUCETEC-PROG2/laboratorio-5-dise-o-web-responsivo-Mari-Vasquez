@@ -1,0 +1,113 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 32px;
+}
+
+.pokemon-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 16px;
+}
+
+.pokemon-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: calc(33.3333% - 32px);
+    max-width: calc(33.3333% - 32px);
+    min-width: 300px;
+}
+
+.pokemon-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.pokemon-image {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background: linear-gradient(135deg, #6d3783, #a98cca 50%);
+}
+
+.pokemon-info {
+    padding: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pokemon-name { 
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.pokemon-type {
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.type-electric {
+    background: linear-gradient(135deg, #b0b3b6, #dbd828 0%);
+}
+
+.type-grass {
+    background: linear-gradient(145deg, #b0b3b6, #066119 50%);
+}
+
+.type-fire {
+    background: linear-gradient(145deg, #b0b3b6, #9c0c0c 50%);
+}
+
+.type-water {
+    background: linear-gradient(145deg, #b0b3b6, #1d80b9 50%);
+}
+
+.type-normal {
+    background: linear-gradient(145deg, #b0b3b6, #606364 50%);
+}
+
+.type-ghost {
+    background: linear-gradient(145deg, #b0b3b6, #6fcccc 50%);
+}
+
+.type-psychic {
+    background: linear-gradient(145deg, #b0b3b6, #d7ec78 50%);
+}
+
+@media screen and (max-width: 900px){
+    .pokemon-grid {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .pokemon-card {
+        flex: calc(50% - 16px);
+        max-width: calc(50% - 16px);
+    }  
+}
+
+@media screen and (max-width: 480px){
+    .pokemon-grid {
+        gap: 16px;
+    }
+
+    .pokemon-card {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
